@@ -12,7 +12,9 @@
 
 </head>
 <body>
+
     <section class="hero">
+        <div id="header"></div>
        
 
         <div class="container container d-flex justify-content-center align-items-center full-height hero-text ">
@@ -712,6 +714,9 @@
     fetch('footer.html')
     .then(response => response.text())
     .then(data => document.getElementById('footer').innerHTML = data);
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('header').innerHTML = data);
     
     // Initialize carousel
     document.addEventListener('DOMContentLoaded', function() {
