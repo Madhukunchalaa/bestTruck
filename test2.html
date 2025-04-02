@@ -3,152 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insurance Cards with Rotating Hover Effect</title>
+    <title>FAQ Section</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .card-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px;
+        /* Custom styles with unique class names */
+        .ct-faq-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 15px;
         }
         
-        .custom-card {
-            width: 260px;
-            height: 220px;
-            position: relative;
+        .ct-faq-heading {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .ct-faq-title {
+            color: #0d3b66;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .ct-faq-subtitle {
+            color: #f4a261;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .ct-faq-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
             overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            background-color: white;
         }
         
-        .card-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            height: 100%;
+        .ct-faq-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .ct-faq-question {
+            color: #0d3b66;
+            font-weight: 600;
+            padding: 1.25rem;
             position: relative;
-            z-index: 2;
-        }
-        
-        .card-icon {
-            color: #FF6B00;
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-        
-        .card-title {
-            color: #00407A;
-            font-weight: bold;
-            text-align: center;
-        }
-        
-        .corner-triangle {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100px;
-            height: 100px;
-            background-color: #FF6B00;
-            clip-path: polygon(0 0, 0 100%, 100% 100%);
-            transform-origin: bottom left;
-            transition: transform 0.4s ease;
-            z-index: 1;
-        }
-        
-        .hover-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background-color: #FF6B00;
-            transform: translateY(100%);
-            transition: transform 0.4s ease;
+            cursor: pointer;
             display: flex;
+            justify-content: space-between;
             align-items: center;
+        }
+        
+        .ct-faq-answer {
+            padding: 0 1.25rem 1.25rem;
+            color: #505a63;
+        }
+        
+        .ct-faq-toggle {
+            width: 30px;
+            height: 30px;
+            background-color: #e9f2ff;
+            border-radius: 50%;
+            display: flex;
             justify-content: center;
+            align-items: center;
+            color: #0d3b66;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .ct-faq-toggle.active {
+            background-color: #0d3b66;
             color: white;
-            text-align: center;
-            padding: 15px;
-            z-index: 1;
+            transform: rotate(45deg);
         }
         
-        .custom-card:hover .corner-triangle {
-            transform: rotate(-90deg) translateY(100%);
-        }
-        
-        .custom-card:hover .hover-overlay {
-            transform: translateY(0);
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .ct-faq-title {
+                font-size: 1.8rem;
+            }
+            
+            .ct-faq-question {
+                font-size: 0.95rem;
+            }
+            
+            .ct-faq-toggle {
+                width: 25px;
+                height: 25px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="card-container">
-        <!-- Card 1 -->
-        <div class="custom-card">
-            <div class="card-content">
-                <div class="card-icon">
-                    <img src="https://via.placeholder.com/50x50/FF6B00/FFFFFF?text=🏆" alt="Trophy Icon">
-                </div>
-                <h3 class="card-title">Best of Companies</h3>
-            </div>
-            <div class="corner-triangle"></div>
-            <div class="hover-overlay">
-                <p>We partner with only the top-rated insurance providers in the industry</p>
-            </div>
+    <div class="ct-faq-container">
+        <div class="ct-faq-heading">
+            <h4 class="ct-faq-subtitle">FAQs</h4>
+            <h2 class="ct-faq-title">Frequently asked questions</h2>
         </div>
         
-        <!-- Card 2 -->
-        <div class="custom-card">
-            <div class="card-content">
-                <div class="card-icon">
-                    <img src="https://via.placeholder.com/50x50/FF6B00/FFFFFF?text=🛡️" alt="Shield Icon">
+        <div class="ct-faq-list">
+            <!-- FAQ Item 1 -->
+            <div class="ct-faq-item">
+                <div class="ct-faq-question" onclick="toggleFaq(this)">
+                    How long would it take to get a concrete truck insurance quote and get a cover?
+                    <div class="ct-faq-toggle">+</div>
                 </div>
-                <h3 class="card-title">Best Premium Coverage</h3>
-            </div>
-            <div class="corner-triangle"></div>
-            <div class="hover-overlay">
-                <p>Comprehensive coverage options at competitive premium rates</p>
-            </div>
-        </div>
-        
-        <!-- Card 3 -->
-        <div class="custom-card">
-            <div class="card-content">
-                <div class="card-icon">
-                    <img src="https://via.placeholder.com/50x50/FF6B00/FFFFFF?text=📝" alt="Document Icon">
+                <div class="ct-faq-answer" style="display: none;">
+                    You can have quotes within 1-2 days, if all the required information is submitted.
                 </div>
-                <h3 class="card-title">Policies Tailored</h3>
             </div>
-            <div class="corner-triangle"></div>
-            <div class="hover-overlay">
-                <p>Customized insurance solutions designed to meet your specific needs</p>
-            </div>
-        </div>
-        
-        <!-- Card 4 -->
-        <div class="custom-card">
-            <div class="card-content">
-                <div class="card-icon">
-                    <img src="https://via.placeholder.com/50x50/FF6B00/FFFFFF?text=👍" alt="Thumbs Up Icon">
+            
+            <!-- FAQ Item 2 -->
+            <div class="ct-faq-item">
+                <div class="ct-faq-question" onclick="toggleFaq(this)">
+                    Why should we have concrete truck insurance for our business?
+                    <div class="ct-faq-toggle">+</div>
                 </div>
-                <h3 class="card-title">Hassle-Free Handling</h3>
+                <div class="ct-faq-answer" style="display: none;">
+                    Concrete truck insurance protects your business from financial losses due to accidents, damages, or liabilities. It's essential for concrete businesses to safeguard expensive equipment and cover potential third-party claims.
+                </div>
             </div>
-            <div class="corner-triangle"></div>
-            <div class="hover-overlay">
-                <p>Smooth claims process with minimal paperwork and quick resolution</p>
+            
+            <!-- FAQ Item 3 -->
+            <div class="ct-faq-item">
+                <div class="ct-faq-question" onclick="toggleFaq(this)">
+                    I already have a concrete truck insurance policy. Is it possible to get a better price?
+                    <div class="ct-faq-toggle">+</div>
+                </div>
+                <div class="ct-faq-answer" style="display: none;">
+                    Yes, we can review your current policy and potentially offer better rates. We work with multiple insurers to find the most competitive prices while maintaining appropriate coverage for your business needs.
+                </div>
             </div>
         </div>
     </div>
-
+    
+    <!-- JavaScript for toggle functionality -->
+    <script>
+        function toggleFaq(element) {
+            // Toggle answer visibility
+            const answer = element.nextElementSibling;
+            answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            
+            // Toggle plus/minus icon
+            const toggle = element.querySelector('.ct-faq-toggle');
+            toggle.classList.toggle('active');
+        }
+    </script>
+    
     <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
