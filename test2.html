@@ -3,111 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transport Operator Package</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Insurance Cards with Rotating Hover Effect</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .bglight {
-            background-color: #f8f9fa;
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
         }
         
-        .feature-icon {
-            transition: all 0.3s ease;
+        .custom-card {
+            width: 260px;
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            background-color: white;
         }
         
-        .feature-item:hover .feature-icon {
-            transform: scale(1.05);
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            height: 100%;
+            position: relative;
+            z-index: 2;
         }
         
-        /* Custom responsive adjustments */
-        @media (max-width: 767.98px) {
-            .feature-item {
-                margin-bottom: 2rem;
-            }
-            
-            .feature-image-container {
-                margin-bottom: 2rem;
-                text-align: center;
-            }
-            
-            .section-heading {
-                text-align: center;
-                margin-bottom: 1.5rem;
-            }
-            
-            .section-intro {
-                text-align: center;
-                margin-bottom: 2rem;
-            }
+        .card-icon {
+            color: #FF6B00;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .card-title {
+            color: #00407A;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .corner-triangle {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: #FF6B00;
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+            transform-origin: bottom left;
+            transition: transform 0.4s ease;
+            z-index: 1;
+        }
+        
+        .hover-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: #FF6B00;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            z-index: 1;
+        }
+        
+        .custom-card:hover .corner-triangle {
+            transform: rotate(-90deg) translateY(100%);
+        }
+        
+        .custom-card:hover .hover-overlay {
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <section class="transport-operator py-6">
-        <div class="container">
-            <div class="row gy-4">
-                <!-- Image container with responsive classes -->
-                <div class="col-lg-5 col-md-6 feature-image-container">
-                    <img src="assets/images/transport-truck.png" alt="Transport Truck" class="img-fluid rounded shadow">
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="custom-card">
+            <div class="card-content">
+                <div class="card-icon">
+                    <img src="https://via.placeholder.com/50x50/FF6B00/FFFFFF?text=🏆" alt="Trophy Icon">
                 </div>
-                
-                <!-- Content container with responsive classes -->
-                <div class="col-lg-7 col-md-6">
-                    <h2 class="Transport fw-bold mb-3 section-heading">Transport operator package</h2>
-                    <p class="mb-4 section-intro">We can offer combined transport operators insurance which can cover all of the above coverage under one policy.</p>
-                    
-                    <!-- Feature items -->
-                    <div class="row">
-                        <div class="col-12">
-                            <!-- Truck and Trailer 1 -->
-                            <div class="d-flex flex-column flex-sm-row align-items-start mb-4 feature-item">
-                                <div class="bglight rounded-circle p-3 me-sm-3 mb-3 mb-sm-0 align-self-center align-self-sm-start feature-icon" style="border: 10px solid #FFFFFF;">
-                                    <img src="images/truck1.png" alt="Truck and Trailer" class="img-fluid">
-                                </div>
-                                <div>
-                                    <h5 class="truck-and-trailer fw-bold">Truck and Trailer</h5>
-                                    <p>Cover for accidental loss or damage to your vehicle and/or to third parties for personal injury or damage to property arising out of the use of your vehicle.</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Truck and Trailer 2 -->
-                            <div class="d-flex flex-column flex-sm-row align-items-start mb-4 feature-item">
-                                <div class="bglight rounded-circle p-3 me-sm-3 mb-3 mb-sm-0 align-self-center align-self-sm-start feature-icon" style="border: 10px solid #FFFFFF;">
-                                    <img src="images/truck2.png" alt="Truck and Trailer" class="img-fluid">
-                                </div>
-                                <div>
-                                    <h5 class="truck-and-trailer fw-bold">Truck and Trailer</h5>
-                                    <p>Cover for accidental loss or damage to your vehicle and/or to third parties for personal injury or damage to property arising out of the use of your vehicle.</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Marine/Transit Cover -->
-                            <div class="d-flex flex-column flex-sm-row align-items-start mb-4 feature-item">
-                                <div class="bglight rounded-circle p-3 me-sm-3 mb-3 mb-sm-0 align-self-center align-self-sm-start feature-icon" style="border: 10px solid #FFFFFF;">
-                                    <img src="images/truck3.png" alt="Marine/Transit cover" class="img-fluid">
-                                </div>
-                                <div>
-                                    <h5 class="truck-and-trailer fw-bold">Marine/Transit cover</h5>
-                                    <p>Provides cover for your customer's freight that is damaged in transit by you. Accidental damage option also available.</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Downtime Cover -->
-                            <div class="d-flex flex-column flex-sm-row align-items-start mb-2 feature-item">
-                                <div class="bglight rounded-circle p-3 me-sm-3 mb-3 mb-sm-0 align-self-center align-self-sm-start feature-icon" style="border: 10px solid #FFFFFF;">
-                                    <img src="images/truck4.png" alt="Downtime Cover" class="img-fluid">
-                                </div>
-                                <div>
-                                    <h5 class="truck-and-trailer fw-bold">Downtime Cover</h5>
-                                    <p>Provides payment of a weekly benefit if you claim loss or damage to your vehicle which has been accepted under the vehicle policy.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="card-title">Best of Companies</h3>
+            </div>
+            <div class="corner-triangle"></div>
+            <div class="hover-overlay">
+                <p>We partner with only the top-rated insurance providers in the industry</p>
             </div>
         </div>
-    </section>
+        
+        <!-- Card 2 -->
+        <div class="custom-card">
+            <div class="card-content">
+                <div class="card-icon">
+                    <img src="https://via.placeholder.com/50x50/FF6B00/FFFFFF?text=🛡️" alt="Shield Icon">
+                </div>
+                <h3 class="card-title">Best Premium Coverage</h3>
+            </div>
+            <div class="corner-triangle"></div>
+            <div class="hover-overlay">
+                <p>Comprehensive coverage options at competitive premium rates</p>
+            </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="custom-card">
+            <div class="card-content">
+                <div class="card-icon">
+                    <img src="https://via.placeholder.com/50x50/FF6B00/FFFFFF?text=📝" alt="Document Icon">
+                </div>
+                <h3 class="card-title">Policies Tailored</h3>
+            </div>
+            <div class="corner-triangle"></div>
+            <div class="hover-overlay">
+                <p>Customized insurance solutions designed to meet your specific needs</p>
+            </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="custom-card">
+            <div class="card-content">
+                <div class="card-icon">
+                    <img src="https://via.placeholder.com/50x50/FF6B00/FFFFFF?text=👍" alt="Thumbs Up Icon">
+                </div>
+                <h3 class="card-title">Hassle-Free Handling</h3>
+            </div>
+            <div class="corner-triangle"></div>
+            <div class="hover-overlay">
+                <p>Smooth claims process with minimal paperwork and quick resolution</p>
+            </div>
+        </div>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
