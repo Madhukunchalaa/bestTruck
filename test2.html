@@ -3,156 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Section</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Best Truck Insurance</title>
+
     <style>
-        /* Custom styles with unique class names */
-        .ct-faq-container {
-            max-width: 900px;
-            margin: 3rem auto;
-            padding: 0 15px;
+        /* Logo styles */
+        .logo-container {
+            background-color: white;
+            border-right: 1px solid #F37220;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
         }
         
-        .ct-faq-heading {
-            text-align: center;
-            margin-bottom: 2.5rem;
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
         }
         
-        .ct-faq-title {
-            color: #0d3b66;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .ct-faq-subtitle {
-            color: #f4a261;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-        
-        .ct-faq-item {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s ease;
-            overflow: hidden;
-        }
-        
-        .ct-faq-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .ct-faq-question {
-            color: #0d3b66;
-            font-weight: 600;
-            padding: 1.25rem;
-            position: relative;
-            cursor: pointer;
+        /* Top nav styles */
+        .top-nav {
+            background-color: #003672;
+            color: white;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
-        .ct-faq-answer {
-            padding: 0 1.25rem 1.25rem;
-            color: #505a63;
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
         }
         
-        .ct-faq-toggle {
-            width: 30px;
-            height: 30px;
-            background-color: #e9f2ff;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #0d3b66;
+        .social-icons a {
+            color: white;
+            margin-left: 15px;
+        }
+        
+        /* Main navigation */
+        .main-nav {
+            background-color: #FF7200;
+            padding: 0 15px;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 15px !important;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .get-quote-btn {
+            background-color: white;
+            color: #003672;
+            border-radius: 25px;
+            padding: 8px 25px;
             font-weight: bold;
+            border: none;
             transition: all 0.3s ease;
         }
         
-        .ct-faq-toggle.active {
-            background-color: #0d3b66;
+        .get-quote-btn:hover {
+            background-color: #003672;
             color: white;
-            transform: rotate(45deg);
         }
         
-        /* Responsive tweaks */
-        @media (max-width: 768px) {
-            .ct-faq-title {
-                font-size: 1.8rem;
+        /* Mobile logo in navigation */
+        .mobile-logo {
+            display: none;
+            max-height: 40px;
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 991.98px) {
+            .logo-container {
+                display: none; /* Hide the desktop logo container on mobile */
             }
             
-            .ct-faq-question {
-                font-size: 0.95rem;
+            .mobile-logo {
+                display: block; /* Show mobile logo */
             }
             
-            .ct-faq-toggle {
-                width: 25px;
-                height: 25px;
+            .main-nav {
+                background-color: transparent !important; /* Remove background for mobile nav */
+                padding: 10px;
+            }
+            
+            .navbar-collapse {
+                background-color: #FF7200; /* Keep the dropdown background orange */
+                padding: 10px;
+                border-radius: 0 0 5px 5px;
+                margin-top: 10px;
+            }
+            
+            .top-nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .social-icons {
+                margin-top: 10px;
+            }
+            
+            .navbar-toggler {
+                border: none;
+                color: #FF7200; /* Orange color for the hamburger */
+                background-color: white;
+                border-radius: 4px;
+            }
+            
+            .navbar-toggler:focus {
+                box-shadow: none;
+            }
+            
+            .navbar-brand {
+                margin-right: auto; /* Push the logo to the left */
             }
         }
     </style>
 </head>
 <body>
-    <div class="ct-faq-container">
-        <div class="ct-faq-heading">
-            <h4 class="ct-faq-subtitle">FAQs</h4>
-            <h2 class="ct-faq-title">Frequently asked questions</h2>
-        </div>
-        
-        <div class="ct-faq-list">
-            <!-- FAQ Item 1 -->
-            <div class="ct-faq-item">
-                <div class="ct-faq-question" onclick="toggleFaq(this)">
-                    How long would it take to get a concrete truck insurance quote and get a cover?
-                    <div class="ct-faq-toggle">+</div>
-                </div>
-                <div class="ct-faq-answer" style="display: none;">
-                    You can have quotes within 1-2 days, if all the required information is submitted.
-                </div>
+    <!-- Logo Container - Left Column -->
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-lg-3 logo-container">
+                <img src="assets/images/best-truck-logo.png" alt="Best Truck Insurance">
             </div>
             
-            <!-- FAQ Item 2 -->
-            <div class="ct-faq-item">
-                <div class="ct-faq-question" onclick="toggleFaq(this)">
-                    Why should we have concrete truck insurance for our business?
-                    <div class="ct-faq-toggle">+</div>
+            <div class="col-lg-9 p-0">
+                <!-- Top Navigation Bar -->
+                <div class="top-nav">
+                    <div class="contact-info">
+                        <a href="tel:1300170328"><i class="fas fa-phone-alt me-2"></i>1300 170 328</a>
+                        <a href="mailto:info@besttruckinsurance.com"><i class="fas fa-envelope me-2"></i>info@besttruckinsurance.com</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
-                <div class="ct-faq-answer" style="display: none;">
-                    Concrete truck insurance protects your business from financial losses due to accidents, damages, or liabilities. It's essential for concrete businesses to safeguard expensive equipment and cover potential third-party claims.
-                </div>
-            </div>
-            
-            <!-- FAQ Item 3 -->
-            <div class="ct-faq-item">
-                <div class="ct-faq-question" onclick="toggleFaq(this)">
-                    I already have a concrete truck insurance policy. Is it possible to get a better price?
-                    <div class="ct-faq-toggle">+</div>
-                </div>
-                <div class="ct-faq-answer" style="display: none;">
-                    Yes, we can review your current policy and potentially offer better rates. We work with multiple insurers to find the most competitive prices while maintaining appropriate coverage for your business needs.
-                </div>
+                
+                <!-- Main Navigation -->
+                <nav class="navbar navbar-expand-lg main-nav">
+                    <div class="container-fluid">
+                        <!-- Mobile Logo - Only visible on mobile -->
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/images/best-truck-logo.png" alt="Best Truck Insurance" class="mobile-logo">
+                        </a>
+                        
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse" id="mainNavbar">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="tip.html">Tips To Save Premium</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="BTF.html">Best Truck Finance</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact Us</a>
+                                </li>
+                            </ul>
+                            <button class="get-quote-btn">Get A Quote</button>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
-    
-    <!-- JavaScript for toggle functionality -->
-    <script>
-        function toggleFaq(element) {
-            // Toggle answer visibility
-            const answer = element.nextElementSibling;
-            answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
-            
-            // Toggle plus/minus icon
-            const toggle = element.querySelector('.ct-faq-toggle');
-            toggle.classList.toggle('active');
-        }
-    </script>
-    
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
