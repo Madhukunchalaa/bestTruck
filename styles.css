@@ -149,7 +149,7 @@ color: #FF7200 !important;
     margin: 30px auto;
     max-width: 1320px;
     height: 209px;
-    margin-top: -7%;
+    margin-top: -3%;
 }
 .custom-partner-card {
     background-color: white;
@@ -257,8 +257,19 @@ box-shadow: 0px -1px 4px 0px #00000040;
 .custom-carousel-control-prev i,
 .custom-carousel-control-next i {
     font-size: 18px;
+    margin-left: -20px;
     
 }
+form{
+    color: #013469;
+}
+
+
+.custom-input:focus {
+    border-color: #007bff; /* Changes border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds a glow effect */
+}
+
 
 
 
@@ -359,6 +370,14 @@ vertical-align: middle;
         border-radius: 0;
         padding: 0.75rem 1rem;
       }
+      .btn-orange{
+/* background-color: #FF7200 !important; */
+width: 212px !important;
+height: 60px !important;
+gap: 10px !important;
+padding: 10px !important;
+
+      }
       
       @media (max-width: 767.98px) {
         .truck-insurance-quote {
@@ -410,7 +429,8 @@ vertical-align: middle;
       }
       
       .quote-form .form-control, .quote-form .form-select {
-        border-radius: 0;
+        border-radius: 15px;
+        border: 1px solid #FF6B00;
         padding: 0.75rem 1rem;
       }
       
@@ -805,6 +825,9 @@ why choose us */
         display: none; /* Hide dashed line on mobile for better layout */
     }
 }
+.contact-info i{
+    margin-left: 10px;
+}
 
 
 
@@ -935,7 +958,7 @@ why choose us */
 
 /* Home page mobile responsive */
 
-@media (max-width:550px) {
+@media (max-width:850px) {
     .about-title {
         font-family: "inter";
         width: 100%;
@@ -969,13 +992,48 @@ why choose us */
 
 /* services  Page */
 
-.services{
-    background-image: url('assets/images/service-home.png');
+.tipper-truck{
+    background-image: url('assets/images/tipper-truck.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
 }
+.fleet-truck{
+    background-image: url('assets/images/fleet-truck-home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+.prime-truck{
+    background-image: url('assets/images/prime-mover-truck-insurance.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+.tow-truck{
+    background-image: url('assets/images/tow.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .service-text{
 width: 698px;
 height: 284px;
@@ -988,6 +1046,13 @@ padding-right: 89px;
 padding-bottom: 34px;
 padding-left: 89px;
 background-color: #00000066;
+background: rgba(0, 0, 0, 0.4); /* semi-transparent */
+ /* 💡 Blur effect */
+-webkit-backdrop-filter: blur(10px); 
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 .service-title h1{
 font-family: Inter;
@@ -1013,7 +1078,8 @@ color: white;
     font-size: 18px;
     line-height: 100%;
     letter-spacing: 0%;
-    text-align: center;    
+    text-align: center;  
+    color: white;  
 }
 
 
@@ -1105,6 +1171,10 @@ color: white;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    margin-top: -88px;
+}
+.card-icon img{
+    width: 40px;
 }
 
 .custom-card {

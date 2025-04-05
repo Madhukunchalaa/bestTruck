@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <style>
+        .contact{
+            background-image: url('assets/images/contact.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            width: 100%;
+        }
+        .contact-card-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+
+        }
+        .contact-card{
+width: 375px;
+height: 272px;
+gap: 10px;
+border-radius: 15px;
+padding-top: 30px;
+padding-right: 10px;
+padding-bottom: 30px;
+padding-left: 10px;
+box-shadow: 0px 4px 13.5px 0px #D9D9D9;
+display: flex;
+align-items:center;
+justify-content: center;
+flex-direction: column;
+color: #013469;
+
+
+        }
+        .icon-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:#FDECDF;
+        border-radius: 50%;
+        width: 92px;
+       height: 92px;
+       left: 131.5px;
+       color: white;
+       flex-direction: column;
+        }
+        .icon-container {
+            color: #FF7200;
+            font-size: 20px;
+            
+        }
+        .contact-card:hover{
+            background-color: #FF7200;
+            color: white;
+            cursor: pointer;
+        }
+        .form-container{
+            width: 1057px;
+            height: 520px;
+           border-radius: 20px;
+           box-shadow: 0px 4px 19.5px 0px #00000040;
+
+
+        }
+        .contact-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        
+        .form-control {
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            background-color: #f5f5f5;
+            border: none;
+        }
+        
+        .form-control:focus {
+            box-shadow: none;
+            border: 1px solid #ff7a00;
+            background-color: #fff;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background-color: #ff7a00;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 35px;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e66f00;
+            transform: translateY(-2px);
+        }
+        
+        .row {
+            --bs-gutter-x: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid contact">
+
+        <div id="header"></div>
+
+    </div>
+    <div class="container mt-5 p-4">
+        <div class="contact-card-container">
+            <div class="contact-card">
+                <div class="icon-container">
+                    <a href="tel:1300170328"><i class="fas fa-phone-alt me-2"></i></a>
+                   
+                </div>
+                <h2>Call Here</h2>
+                <p> (+91) 1300 170 328</p>
+            </div>
+            <div class="contact-card">
+                <div class="icon-container">
+                    <a href="tel:1300170328"><i class="fas fa-phone-alt me-2"></i></a>
+                   
+                </div>
+                <h2>Call Here</h2>
+                <p> (+91) 1300 170 328</p>
+            </div>
+            <div class="contact-card">
+                <div class="icon-container">
+                    <a href="tel:1300170328"><i class="fas fa-phone-alt me-2"></i></a>
+                   
+                </div>
+                <h2>Call Here</h2>
+                <p> (+91) 1300 170 328</p>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center"><h1>Contact With Us</h1> </div>
+   
+    <div class="container">
+        <div class="contact-container">
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Last Name">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <input type="tel" class="form-control" placeholder="Phone Number">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <textarea class="form-control" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+
+
+    <script>
+        fetch("header.html")
+        .then(response=>response.text())
+        .then(data=>document.getElementById("header").innerHTML=data)
+
+        fetch('footer.html')
+        .then(response=>response.text())
+        .then(data=>document.getElementById('footer').innerHTML=data)
+    </script>
+</body>
+</html>
