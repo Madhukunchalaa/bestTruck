@@ -139,12 +139,54 @@
   <!-- Custom Script -->
   <script>
       // Load footer
-      fetch('footer.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('footer').innerHTML = data);
-      fetch('header.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('header').innerHTML = data);
+      document.addEventListener('DOMContentLoaded', function () {
+
+// Fetch header
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
+
+        // After header is loaded into DOM
+        highlightActiveLink();
+    });
+
+// Footer fetch (optional)
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+    });
+
+function highlightActiveLink() {
+    let currentPage = window.location.pathname.split("/").pop() || "index.html";
+    console.log("Current page detected:", currentPage);
+
+    const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage) {
+            link.classList.add('active');
+
+            // Special style if it's tip.html
+            if (currentPage === "tip.html") {
+               
+            }
+
+            const parentDropdown = link.closest('.dropdown');
+            if (parentDropdown) {
+                const dropdownToggle = parentDropdown.querySelector('.nav-link.dropdown-toggle');
+                if (dropdownToggle) {
+                    dropdownToggle.classList.add('active');
+                }
+            }
+        }
+    });
+}
+
+});
+
       
   </script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
