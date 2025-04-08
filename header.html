@@ -8,9 +8,77 @@
     <title>Best Truck Insurance</title>
     <link rel="stylesheet" href="styles.css">
 
-  
     <style>
-       
+        /* Offcanvas styling with orange background */
+        .offcanvas {
+            max-width: 300px;
+            background-color: #ff8c00; /* Orange background */
+        }
+        
+        .offcanvas-header {
+             /* Slightly darker orange for header */
+            border-bottom: 1px solid #ffa333;
+        }
+        
+        .offcanvas-body .nav-link {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #ffa333;
+            color: orange !important; /* White text for better contrast */
+        }
+        
+        .offcanvas-body .dropdown-item {
+            color: white;
+            
+        }
+        
+        .offcanvas-body .dropdown-item:hover {
+            background-color: #ffb347;
+        }
+        
+        .offcanvas-body .dropdown-menu {
+            position: static;
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            padding-left: 1rem;
+            background-color: #ff9919;
+        }
+        
+        .hamburger-toggle {
+            cursor: pointer;
+            padding: 10px 15px;
+            background: transparent;
+            border: none;
+        }
+        
+        /* Hide mobile logo on desktop */
+        @media (min-width: 992px) {
+            .mobile-logo {
+                display: none;
+            }
+            
+            .hamburger-toggle {
+                display: none;
+            }
+        }
+        
+        /* Show mobile logo on mobile */
+        @media (max-width: 991px) {
+            .mobile-logo {
+                display: block;
+                max-height: 50px;
+            }
+        }
+        
+        /* White color for chevron icon */
+        .fa-chevron-down {
+            color: white;
+        }
+        
+        /* Make close button white */
+        .btn-close {
+            filter: brightness(0) invert(1);
+        }
     </style>
 </head>
 <body>
@@ -55,10 +123,7 @@
                             <img src="assets/images/best-truck-logo.png" alt="Best Truck Insurance" class="mobile-logo">
                         </a>
                         
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        
+                        <!-- Desktop Navigation -->
                         <div class="collapse navbar-collapse" id="mainNavbar">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
@@ -69,7 +134,7 @@
                                         Services
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                        <li><a class="dropdown-item" href="Concrete-truck-insurance.html"><i class="fas fa-truck me-2"></i>Concrete Truck Insurance</a></li>
+                                        <li><a class="dropdown-item" href="Concrete-truck -insurance.html"><i class="fas fa-truck me-2"></i>Concrete Truck Insurance</a></li>
                                         <li><a class="dropdown-item" href="Fleet-truck-insurance-service.html"><i class="fas fa-truck-moving me-2"></i>Fleet Truck Insurance Service</a></li>
                                         <li><a class="dropdown-item" href="tipper-truck-insurance.html"><i class="fas fa-truck-pickup me-2"></i>Tipper Truck Insurance</a></li>
                                         <li><a class="dropdown-item" href="prime-mover-truck-insurance.html"><i class="fas fa-truck-monster me-2"></i>Prime Mover Truck Insurance</a></li>
@@ -91,9 +156,61 @@
                             </ul>
                             <button class="get-quote-btn">Get A Quote</button>
                         </div>
+                        
+                        <!-- Hamburger Button for Offcanvas -->
+                        <button class="hamburger-toggle d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <i class="fas fa-bars fa-lg"></i>
+                        </button>
                     </div>
                 </nav>
             </div>
+        </div>
+    </div>
+    
+    <!-- Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">
+                <img src="assets/images/best-truck-logo.png" alt="Best Truck Insurance" height="40">
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#" data-bs-toggle="collapse" data-bs-target="#servicesSubmenu">
+                        Services
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="collapse" id="servicesSubmenu">
+                        <ul class="navbar-nav">
+                            <li><a class="dropdown-item" href="Concrete-truck -insurance.html"><i class="fas fa-truck me-2"></i>Concrete Truck Insurance</a></li>
+                            <li><a class="dropdown-item" href="Fleet-truck-insurance-service.html"><i class="fas fa-truck-moving me-2"></i>Fleet Truck Insurance Service</a></li>
+                            <li><a class="dropdown-item" href="tipper-truck-insurance.html"><i class="fas fa-truck-pickup me-2"></i>Tipper Truck Insurance</a></li>
+                            <li><a class="dropdown-item" href="prime-mover-truck-insurance.html"><i class="fas fa-truck-monster me-2"></i>Prime Mover Truck Insurance</a></li>
+                            <li><a class="dropdown-item" href="tow-truck-insurance.html"><i class="fas fa-truck-loading me-2"></i>Tow Truck Insurance</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tip.html">Tips To Save Premium</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="BTF.html">Best Truck Finance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item mt-3">
+                    <button class="get-quote-btn w-100">Get A Quote</button>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -102,7 +219,7 @@
     <script>
         // This function runs when the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all navigation links
+            // Get all navigation links (including offcanvas)
             const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
             
             // Get current page filename from URL
@@ -127,6 +244,12 @@
                         if (dropdownToggle) {
                             dropdownToggle.classList.add('active');
                         }
+                    }
+                    
+                    // For offcanvas, expand the submenu if the active link is in it
+                    const submenu = link.closest('.collapse');
+                    if (submenu) {
+                        submenu.classList.add('show');
                     }
                 }
             });

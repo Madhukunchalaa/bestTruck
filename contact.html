@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <style>
         .contact{
             background-image: url('assets/images/contact-2.png');
@@ -19,7 +24,7 @@
             
 
         }
-        .contact-card{
+.contact-card{
 width: 375px;
 height: 272px;
 gap: 10px;
@@ -113,10 +118,37 @@ color: #013469;
         .row {
             --bs-gutter-x: 20px;
         }
+        .contact-card:hover .icon-container {
+    background-color: white; /* or any color you want */
+    color: #FF7200; /* optional: keep icon color visible */
+    transition: background-color 0.3s ease, color 0.3s ease;
+   
+}
+.contact-card:hover .icon-container i{
+    color: #FF7200 !important;
+}
+.icon-container i{
+    color: orange;
+}
+
+
+@media(max-width:550px){
+    .contact-card-container{
+        flex-direction: column;
+        gap: 2em;
+    }
+
+}
+
     </style>
 </head>
 <body>
     <div class="container-fluid contact">
+        <a href="#form">
+            <div class="rqst-box">
+           REQUEST A QUOTE
+            </div>
+          </a>  
 
         <div id="header"></div>
 
@@ -130,22 +162,26 @@ color: #013469;
                 </div>
                 <h2>Call Here</h2>
                 <p> (+91) 1300 170 328</p>
+               
             </div>
             <div class="contact-card">
                 <div class="icon-container">
-                    <a href="tel:1300170328"><i class="fas fa-phone-alt me-2"></i></a>
+                    <a href="tel:1300170328"><i class="fas fa-location-dot me-2"></i></a>
                    
                 </div>
-                <h2>Call Here</h2>
-                <p> (+91) 1300 170 328</p>
+                <h2>Location Here</h2>
+                <p> 25 Training kalong road, Singapore
+                    437044</p>
+               
             </div>
             <div class="contact-card">
                 <div class="icon-container">
-                    <a href="tel:1300170328"><i class="fas fa-phone-alt me-2"></i></a>
+                    <a href="tel:1300170328"><i class="fa-solid fa-envelope"></i></a>
                    
                 </div>
-                <h2>Call Here</h2>
-                <p> (+91) 1300 170 328</p>
+                <h2>Email Here</h2>
+                <p>info@besttruckinsurance.com</p>
+                
             </div>
 
             </div>
@@ -252,5 +288,6 @@ function highlightActiveLink() {
 
 });
     </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

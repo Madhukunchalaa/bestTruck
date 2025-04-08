@@ -1360,8 +1360,6 @@ why choose us */
     color: white;
 }
 
-
-
 /* faq */
 .faq-section {
     
@@ -1371,7 +1369,7 @@ why choose us */
 .faq-image {
     width: 641px;
     height: 624px;
-    border: 5px solid #FF7200;
+    /* border: 5px solid #FF7200; */
     border-radius: 15px;
 }
 .faq-heading {
@@ -1524,6 +1522,15 @@ why choose us */
 
 /* services  Page */
 
+.services{
+    background-image: url('assets/images/concrete.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+
+}
+
 .tipper-truck{
     background-image: url('assets/images/tipper-truck.jpg');
     background-size: cover;
@@ -1532,7 +1539,7 @@ why choose us */
     height: 100vh;
 }
 .fleet-truck{
-    background-image: url('assets/images/fleet-truck-home.jpg');
+    background-image: url('assets/images/fleet.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1546,7 +1553,7 @@ why choose us */
     height: 100vh;
 }
 .tow-truck{
-    background-image: url('assets/images/tow.png');
+    background-image: url('assets/images/tow-3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1586,19 +1593,19 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 }
-.service-title h1{
+.service-title h3{
 font-family: Inter;
 font-weight: 700;
-font-size: 40px;
+font-size: 28px;
 line-height: 100%;
 letter-spacing: 0%;
 color: #FF7200;
 
 }
-.service-title h3{
+.service-title h1{
 font-family: Poppins;
 font-weight: 600;
-font-size: 28px;
+font-size: 24px;
 line-height: 100%;
 letter-spacing: 0%;
 color: white;
@@ -1608,7 +1615,7 @@ color: white;
     font-family: Poppins;
     font-weight: 400;
     font-size: 18px;
-    line-height: 100%;
+    line-height: 23px;
     letter-spacing: 0%;
     text-align: center;  
     color: white;  
@@ -1740,7 +1747,7 @@ color: white;
 .card-icon {
     color: #FF6B00;
     font-size: 40px;
-    margin-bottom: 15px;
+    margin-bottom: -4px;
     transition: transform 0.6s ease;
 }
 
@@ -1756,7 +1763,7 @@ color: white;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100px;
+    width: 86px;
     height: 100px;
     background-color: #FF6B00;
     clip-path: polygon(0 0, 0 100%, 100% 100%);
