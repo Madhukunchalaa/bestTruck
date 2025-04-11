@@ -77,7 +77,6 @@ background-color: #FFFFFF;
   /* Logo styles */
   .logoo-container {
     background-color: white;
-    border: 1px solid #F37220;
     height: 119px;
     display: flex;
     align-items: center;
@@ -128,10 +127,11 @@ background-color: #FFFFFF;
 
 .nav-link {
     position: relative;
-    color: white !important;
+   
     font-weight: 500;
     padding: 15px !important;
     transition: color 0.3s ease;
+    color: white;
 }
 
 .nav-link:hover {
@@ -256,6 +256,7 @@ background-color: #FFFFFF;
     .logoo-container {
         display: none; /* Hide the desktop logo container on mobile */
     }
+    
     
     .mobile-logo {
         display: block; /* Show mobile logo */
@@ -411,9 +412,8 @@ color: #FF7200 !important;
     color: white !important;
 
 }
-
 .custom-partners-section {
-    background-color: #ffff;
+    background-color: #fff;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
@@ -422,6 +422,7 @@ color: #FF7200 !important;
     height: 209px;
     margin-top: -3%;
 }
+
 .custom-partner-card {
     background-color: white;
     border-radius: 15px;
@@ -431,106 +432,104 @@ color: #FF7200 !important;
     align-items: center;
     justify-content: center;
     margin: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border: 1px solid #eee;
     width: 258px;
-height: 119px;
-box-shadow: 0px -1px 4px 0px #00000040;
-
-
+    height: 119px;
+    box-shadow: 0px -1px 4px 0px #00000040;
 }
+
 .custom-partner-card img {
     max-width: 100%;
     max-height: 80px;
     object-fit: contain;
 }
+
+/* Desktop carousel arrows */
 .custom-carousel-control-prev,
 .custom-carousel-control-next {
+    background-color: white;
+    color: #E05E00;
+    border: 1px solid #E05E00;
     width: 40px;
     height: 40px;
-    background-color: #f37121;
     border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-}
-.custom-carousel-control-prev {
-    left: -20px;
-}
-.custom-carousel-control-next {
-    right: -20px;
-}
-.custom-carousel-control-prev-icon,
-.custom-carousel-control-next-icon {
-    width: 20px;
-    height: 20px;
-}
-.custom-carousel-control-prev,
-.custom-carousel-control-next {
-    width: 40px;
-    height: 40px;
-    background-color: #f37121;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute; /* Ensures correct placement */
-    z-index: 10; /* Keeps buttons above content */
-}
-
-.custom-carousel-control-prev {
-    left: 10px; /* Adjust positioning */
-}
-
-.custom-carousel-control-next {
-    right: 10px; /* Adjust positioning */
-}
-
-.custom-carousel-control-prev-icon,
-.custom-carousel-control-next-icon {
-    width: 20px;
-    height: 20px;
-    filter: invert(1); /* Ensures visibility */
-}
-
-.custom-carousel-control-prev,
-.custom-carousel-control-next {
-    background-color: white; /* White background */
-    color: #E05E00; /* Orange icon color */
-    border: 1px solid #E05E00; /* Orange border */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px; /* Ensure button size */
-    height: 40px;
-    border-radius: 50%; /* Make it circular */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease-in-out;
 }
 
-/* Hover Effect */
-.custom-carousel-control-prev:hover,
-.custom-carousel-control-next:hover {
-    background-color: #E05E00; /* Orange background on hover */
-    color: white; /* White icon on hover */
+.custom-carousel-control-prev {
+    left: 10px;
 }
 
-/* Positioning */
+.custom-carousel-control-next {
+    right: 10px;
+}
 
+.custom-carousel-control-prev-icon,
+.custom-carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
 
-/* Font Awesome Icons Styling */
+.custom-carousel-control-prev:hover,
+.custom-carousel-control-next:hover {
+    background-color: #E05E00;
+    color: white;
+}
+
+/* Icon style */
 .custom-carousel-control-prev i,
 .custom-carousel-control-next i {
     font-size: 18px;
-    margin-left: -20px;
-    
+    margin-left: -18px;
 }
+
+/* Mobile controls (below carousel) */
+@media (max-width: 767.98px) {
+    .custom-carousel-control-prev,
+    .custom-carousel-control-next {
+        display: none !important;
+    }
+
+    .custom-carousel-controls-mobile {
+        gap: 12px;
+    }
+
+    .custom-carousel-control-prev-mobile,
+    .custom-carousel-control-next-mobile {
+        background-color: white;
+        color: #E05E00;
+        border: 1px solid #E05E00;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .custom-carousel-control-prev-mobile:hover,
+    .custom-carousel-control-next-mobile:hover {
+        background-color: #E05E00;
+        color: white;
+    }
+
+    .custom-carousel-control-prev-mobile i,
+    .custom-carousel-control-next-mobile i {
+        font-size: 18px;
+    }
+}
+
+
+
 @media (max-width: 768px) {
     .hero {
         background-position:  center; /* Adjust if image crops weirdly */
@@ -550,9 +549,12 @@ box-shadow: 0px -1px 4px 0px #00000040;
         
     }
     .right-btn{
-        margin-top: 10%;
+        
         background-color: transparent !important;
-        color: white !important;
+       
+    }
+    .hero-title{
+       margin-top: -12% !important;
     }
     
     
@@ -1073,6 +1075,17 @@ padding: 10px !important;
 .imgcontainer{
     margin-top: 20px;
 }
+.placeholder-card{
+    border: 2px solid #FF7200 !important;
+    /* padding: 20px; */
+}
+.content-container{
+   
+    border-radius: 15px;
+    margin-top:-10px;
+    z-index: 1;
+    box-shadow:  4px 4px 10px 2px rgba(0, 0, 0, 0.2);
+}
 
 .truck-img {
     width: 480px;
@@ -1082,7 +1095,7 @@ padding: 10px !important;
 }
 
 .box{
-    width:100% !important;
+    width:155% !important;
     height: auto !important;
     border: 3px solid #ff6b00;
     background-color: #E1EEFB;
@@ -1131,7 +1144,7 @@ padding: 10px !important;
 
 
 .best-section {
-    background: linear-gradient(to bottom, #1a3c6d 0%, #1a3c6d 50%, white 50%, white 100%);
+    background: linear-gradient(to bottom, #1a3c6d 0%, #1a3c6d 70%, white 50%, white 100%);
     color: white;
     padding: 50px 0;
 }
@@ -1182,10 +1195,10 @@ padding: 10px !important;
     padding: 20px;
 }
 .card img {
-    width: 100%;
-    height: 200px;
+    width: 350px;
+    height: 243px;
     object-fit: cover;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 .card h3 {
     font-size: 1.25rem;
@@ -1241,7 +1254,23 @@ padding: 10px !important;
         flex: 0 0 100%; /* 1 card per slide */
         max-width: 100%;
     }
-}
+    .box{
+        width: 80% !important;
+        margin-left: 10%;
+    }
+    .experience-badge{
+        margin-left: 5%;
+
+    }
+    .mars-linklist{
+        margin-left: -6% !important;
+    
+    }
+   }
+   .hero-title{
+    margin-top: 20%;
+   }
+
 .box{
     margin-top: 20px;
     width:480px;
@@ -1315,9 +1344,34 @@ why choose us */
     width: 150px;
     height: auto;
 }
-.truck-move {
-    animation: moveTruck 5s linear infinite;
+.truck2-container img {
+    width: 150px;
+    height: auto;
 }
+
+
+
+/*  */
+
+
+
+
+
+
+
+.truck-move {
+    animation: moveTruck 8s linear infinite;
+}
+.placeholder-card{
+    border:  1px solid #ff8c00;
+}
+.truck2-container{
+    display: none;
+}
+
+
+
+
 @keyframes moveTruck {
     0% {
         transform: translateX(70%);
@@ -1347,6 +1401,10 @@ why choose us */
     }
     .step-connector {
         display: none; /* Hide dashed line on mobile for better layout */
+    }
+    .truck2-container{
+        display: block !important;
+        
     }
 }
 .contact-info i{
@@ -1574,16 +1632,13 @@ why choose us */
 
 
 .service-text{
-width: 698px;
-height: 284px;
+/* width: 698px;
+height: 284px; */
 top: 193px;
 left: 371px;
 gap: 10px;
 border-radius: 20px;
-padding-top: 34px;
-padding-right: 89px;
-padding-bottom: 34px;
-padding-left: 89px;
+padding: 34px 89px;
 background-color: #00000066;
 background: rgba(0, 0, 0, 0.4); /* semi-transparent */
  /* 💡 Blur effect */
@@ -1592,11 +1647,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+margin-top: 15%;
 }
 .service-title h3{
 font-family: Inter;
 font-weight: 700;
-font-size: 28px;
+font-size: 54px;
 line-height: 100%;
 letter-spacing: 0%;
 color: #FF7200;
@@ -1610,6 +1666,9 @@ line-height: 100%;
 letter-spacing: 0%;
 color: white;
 
+}
+.btn-read-more{
+    background-color: #003672 !important;
 }
 .service-title p{
     font-family: Poppins;
@@ -1831,6 +1890,9 @@ color: white;
 .feature-list {
     list-style: none;
     padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .feature-item {
@@ -1872,6 +1934,20 @@ color: white;
     .insurance-image {
         margin-bottom: 30px;
         max-height: 300px;
+        
+    }
+    .service-text{
+        padding: 30px;
+        
+       
+    }
+    .service-title h3{
+        font-size: 24px;
+        text-align: center;
+    }
+    .service-title p{
+        text-align: left;
+        font-size: 15px;
     }
     
     .section-content {
@@ -2315,6 +2391,14 @@ color: white;
     margin-left: 20px;
     }
     .truck-container{
-        display: none;
+        margin-top: -6%;
     }
+   .truck2-container{
+    margin-top: 54% !;
+   }
   }
+  @media(max-width:550px){
+    .hero-title{
+     margin-top: -27% !important;
+    }
+ }

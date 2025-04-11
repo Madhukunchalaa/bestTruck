@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* Option 1: Using border-bottom */
-.quick-links-heading {
-    color: white;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
+  <meta charset="UTF-8">
+  <title>Anime.js Demo</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
 
-.quick-links-heading::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 125px; /* Adjust based on your needs */
-    height: 3px;
-    background-color: #ff8c00; /* Orange color */
-}
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #3498db;
+      border-radius: 12px;
+    }
 
-/* Option 2: Using a separate div element */
-.heading-container {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.heading-text {
-    color: white;
-    margin-bottom: 10px;
-}
-
-.heading-underline {
-    width: 125px;
-    height: 3px;
-    background-color: #ff8c00; /* Orange color */
-}
-
-/* Option 3: Using text-decoration with CSS variables (modern browsers) */
-.quick-links-modern {
-    color: white;
-    text-decoration: underline;
-    text-decoration-color: #ff8c00;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 10px;
-    text-decoration-skip-ink: none;
-}
-    </style>
+    button {
+      position: absolute;
+      bottom: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    
-    <div style="background-color: black; padding: 20px;">
-        <div class="heading-container">
-            <h2 class="heading-text">Quick Links</h2>
-            <div class="heading-underline"></div>
+  <div class="custom-partners-section">
+    <div id="customPartnersCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row d-flex">
+                    <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/zurich.png" alt="Zurich"></div></div>
+                    <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/qbe.png" alt="QBE"></div></div>
+                    <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/nti.png" alt="NTI"></div></div>
+                    <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/vero.png" alt="Vero"></div></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row d-flex">
+                    <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/atc.png" alt="Partner 5"></div></div>
+                    <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/cgu.png" alt="Partner 6"></div></div>
+                    <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/uaa.png" alt="Partner 7"></div></div>
+                    <div class="col-md-3"><div class="custom-partner-card"><img src="/api/placeholder/200/80" alt="Partner 8"></div></div>
+                </div>
+            </div>
+            <button class="custom-carousel-control-prev" type="button" data-bs-target="#customPartnersCarousel" data-bs-slide="prev">
+                <span class="custom-carousel-control-prev-icon" aria-hidden="true"></span>
+                <span > <i class="fas fa-chevron-left"></i>  </span>
+            </button>
         </div>
+        
+        <button class="custom-carousel-control-next" type="button" data-bs-target="#customPartnersCarousel" data-bs-slide="next">
+            <span class="custom-carousel-control-next-icon" aria-hidden="true"></span>
+            <span ><i class="fas fa-chevron-right"></i> </span>
+        </button>
     </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <div class="box"></div>
+  <button onclick="animateBox()">Animate</button>
+
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <script>
+    function animateBox() {
+      anime({
+        targets: '.box',
+        translateX: 250,
+        rotate: '10turn',
+        translateY:250,
+        backgroundColor: '#e74c3c',
+        borderRadius: ['12px', '50%'],
+        duration: 1500,
+        easing: 'easeInOutQuad'
+      });
+    }
+  </script>
+
 </body>
 </html>

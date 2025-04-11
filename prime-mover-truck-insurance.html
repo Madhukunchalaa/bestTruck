@@ -172,180 +172,164 @@
         </div>
     </section>
 
-    <section class="truck-insurance-quote">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 text-center mb-4 ">
-              <h2 class="section-title text-orange">Get a free truck insurance quote</h2>
-            </div>
-          </div>
-          
-          <div class="row justify-content-center mb-4 ">
-            <div class="col-md-6 d-flex">
-              <div class="btn-group w-100" role="group">
-                <button type="button" class="btn btn-orange active">Single Truck</button>
-                <button type="button" class="btn btn-outline-orange">Multiple Truck</button>
-              </div>
-            </div>
-          </div>
-          
-          <div class="row ">
-            <div class="col-12 px-5">
-              <form class="quote-form bg-light-beige p-4 rounded">
-                <div class="row mb-3">
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="name" required>
+    <section class="quote-section">
+      <h2 class="quote-heading">Get a Free Truck Insurance Quote</h2>
+      <div class="container-fluid" id="form">
+          <div class="form-container">
+              <form id="singleTruckForm" class="quote-form active">
+                  <div class="row form-row">
+                      <div class="col-md-4">
+                          <label class="form-label">Name<span class="required">*</span></label>
+                          <input type="text" class="form-control" required>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Types of vehicle<span class="required">*</span></label>
+                          <select class="form-select" required>
+                              <option value="" selected disabled>Select vehicle type</option>
+                              <option value="concrete">Concrete Truck</option>
+                              <option value="tipper">Tipper Truck</option>
+                              <option value="prime">Prime Mover</option>
+                              <option value="tow">Tow Truck</option>
+                              <option value="other">Other</option>
+                          </select>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Registration Number<span class="required">*</span></label>
+                          <input type="text" class="form-control" required>
+                      </div>
                   </div>
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="vehicleType" class="form-label">Types of vehicle<span class="text-danger">*</span></label>
-                    <select class="form-select" id="vehicleType" required>
-                      <option selected disabled value="">Select</option>
-                      <option>Semi-trailer</option>
-                      <option>Rigid truck</option>
-                      <option>Tow truck</option>
-                      <option>Other</option>
-                    </select>
+                  <div class="row form-row">
+                      <div class="col-md-4">
+                          <label class="form-label">Email<span class="required">*</span></label>
+                          <input type="email" class="form-control" required>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Carrying Capacity (GVM - TARE WEIGHT)<span class="required">*</span></label>
+                          <select class="form-select" required>
+                              <option value="" selected disabled>Select capacity</option>
+                              <option value="0-5">0-5 tonnes</option>
+                              <option value="5-10">5-10 tonnes</option>
+                              <option value="10-20">10-20 tonnes</option>
+                              <option value="20+">20+ tonnes</option>
+                          </select>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Sum Insured (Vehicle value) $<span class="required">*</span></label>
+                          <input type="text" class="form-control" required>
+                      </div>
                   </div>
-                  <div class="col-md-4">
-                    <label for="regNumber" class="form-label">Registration Number<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="regNumber" required>
+                  <div class="row form-row">
+                      <div class="col-md-4">
+                          <label class="form-label">Contact Number<span class="required">*</span></label>
+                          <input type="tel" class="form-control" required>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Year, Make and Model (Truck details)<span class="required">*</span></label>
+                          <input type="text" class="form-control" required>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Marine (goods in transit cover) $<span class="required">*</span></label>
+                          <select class="form-select" required>
+                              <option value="" selected disabled>Select cover amount</option>
+                              <option value="none">No cover needed</option>
+                              <option value="50k">$50,000</option>
+                              <option value="100k">$100,000</option>
+                              <option value="250k">$250,000</option>
+                              <option value="500k">$500,000</option>
+                              <option value="other">Other amount</option>
+                          </select>
+                      </div>
                   </div>
-                </div>
-                
-                <div class="row mb-3">
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" id="email" required>
+                  <div class="row form-row">
+                      <div class="col-md-4">
+                          <label class="form-label">Company Name (if any)<span class="required">*</span></label>
+                          <input type="text" class="form-control" required>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Base operation postcode and Suburb<span class="required">*</span></label>
+                          <input type="text" class="form-control" required>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Number of years relevant truck license held<span class="required">*</span></label>
+                          <select class="form-select" required>
+                              <option value="" selected disabled>Select years</option>
+                              <option value="0-2">0-2 years</option>
+                              <option value="3-5">3-5 years</option>
+                              <option value="6-10">6-10 years</option>
+                              <option value="10+">10+ years</option>
+                          </select>
+                      </div>
                   </div>
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="carryingCapacity" class="form-label">Carrying Capacity (GVM - TARE WEIGHT)<span class="text-danger">*</span></label>
-                    <select class="form-select" id="carryingCapacity" required>
-                      <option selected disabled value="">Select</option>
-                      <option>Less than 5 tonnes</option>
-                      <option>5-10 tonnes</option>
-                      <option>More than 10 tonnes</option>
-                    </select>
+                  <div class="row form-row">
+                      <div class="col-md-4">
+                          <label class="form-label">Address<span class="required">*</span></label>
+                          <input type="text" class="form-control" required>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Radius of operation<span class="required">*</span></label>
+                          <select class="form-select" required>
+                              <option value="" selected disabled>Select radius</option>
+                              <option value="local">Local only (50km)</option>
+                              <option value="regional">Regional (50-200km)</option>
+                              <option value="state">Within state (200-500km)</option>
+                              <option value="interstate">Interstate (500km+)</option>
+                          </select>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Number of truck insurance claims made in last 5 years $<span class="required">*</span></label>
+                          <select class="form-select" required>
+                              <option value="" selected disabled>Select number</option>
+                              <option value="0">0 claims</option>
+                              <option value="1">1 claim</option>
+                              <option value="2">2 claims</option>
+                              <option value="3+">3+ claims</option>
+                          </select>
+                      </div>
                   </div>
-                  <div class="col-md-4">
-                    <label for="sumInsured" class="form-label">Sum Insured (Vehicle value) $<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="sumInsured" required>
+                  <div class="row form-row">
+                      <div class="col-md-4">
+                          <label class="form-label">Occupation<span class="required">*</span></label>
+                          <select class="form-select" required>
+                              <option value="" selected disabled>Select occupation</option>
+                              <option value="owner">Owner-operator</option>
+                              <option value="driver">Employed driver</option>
+                              <option value="contractor">Contractor</option>
+                              <option value="other">Other</option>
+                          </select>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Types of goods carried<span class="required">*</span></label>
+                          <select class="form-select" required>
+                              <option value="" selected disabled>Select goods type</option>
+                              <option value="general">General Freight</option>
+                              <option value="refrigerated">Refrigerated Goods</option>
+                              <option value="livestock">Livestock</option>
+                              <option value="dangerous">Dangerous Goods</option>
+                              <option value="other">Other</option>
+                          </select>
+                      </div>
+                      <div class="col-md-4">
+                          <label class="form-label">Public Liability cover required $<span class="required">*</span></label>
+                          <select class="form-select" required>
+                              <option value="" selected disabled>Select cover amount</option>
+                              <option value="none">No cover needed</option>
+                              <option value="5m">$5 million</option>
+                              <option value="10m">$10 million</option>
+                              <option value="20m">$20 million</option>
+                          </select>
+                      </div>
                   </div>
-                </div>
-                
-                <div class="row mb-3">
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="contactNumber" class="form-label">Contact Number<span class="text-danger">*</span></label>
-                    <input type="tel" class="form-control" id="contactNumber" required>
+                  <div class="submit-container">
+                      <button type="submit" class="submit-btn">Submit</button>
                   </div>
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="truckDetails" class="form-label">Year, Make and Model (Truck details)<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="truckDetails" required>
-                  </div>
-                  <div class="col-md-4">
-                    <label for="marineGoods" class="form-label">Marine (goods in transit cover) $<span class="text-danger">*</span></label>
-                    <select class="form-select" id="marineGoods" required>
-                      <option selected disabled value="">Select</option>
-                      <option>Not required</option>
-                      <option>Up to $10,000</option>
-                      <option>Up to $50,000</option>
-                      <option>Over $50,000</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div class="row mb-3">
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="companyName" class="form-label">Company Name (if any)<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="companyName" required>
-                  </div>
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="baseOperation" class="form-label">Base operation postcode and Suburb<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="baseOperation" required>
-                  </div>
-                  <div class="col-md-4">
-                    <label for="licenseYears" class="form-label">Number of years relevant truck license held<span class="text-danger">*</span></label>
-                    <select class="form-select" id="licenseYears" required>
-                      <option selected disabled value="">Select</option>
-                      <option>Less than 2 years</option>
-                      <option>2-5 years</option>
-                      <option>5-10 years</option>
-                      <option>More than 10 years</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div class="row mb-3">
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="address" class="form-label">Address<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="address" required>
-                  </div>
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="radiusOperation" class="form-label">Radius of operation<span class="text-danger">*</span></label>
-                    <select class="form-select" id="radiusOperation" required>
-                      <option selected disabled value="">Select</option>
-                      <option>Local only (50km)</option>
-                      <option>Regional (200km)</option>
-                      <option>Interstate</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <label for="insuranceClaims" class="form-label">Number of truck insurance claims made in last 5 years $<span class="text-danger">*</span></label>
-                    <select class="form-select" id="insuranceClaims" required>
-                      <option selected disabled value="">Select</option>
-                      <option>None</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3 or more</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div class="row mb-4">
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="occupation" class="form-label">Occupation<span class="text-danger">*</span></label>
-                    <select class="form-select" id="occupation" required>
-                      <option selected disabled value="">Select</option>
-                      <option>Owner-operator</option>
-                      <option>Employee</option>
-                      <option>Fleet manager</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <label for="goodsCarried" class="form-label">Types of goods carried<span class="text-danger">*</span></label>
-                    <select class="form-select" id="goodsCarried" required>
-                      <option selected disabled value="">Select</option>
-                      <option>General freight</option>
-                      <option>Furniture/household goods</option>
-                      <option>Refrigerated goods</option>
-                      <option>Liquid/chemicals</option>
-                      <option>Livestock</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <label for="liability" class="form-label">Public Liability cover required $<span class="text-danger">*</span></label>
-                    <select class="form-select" id="liability" required>
-                      <option selected disabled value="">Select</option>
-                      <option>Not required</option>
-                      <option>$5 million</option>
-                      <option>$10 million</option>
-                      <option>$20 million</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div class="row">
-                  <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-orange px-5">Submit</button>
-                  </div>
-                </div>
               </form>
-            </div>
           </div>
-        </div>
-      </section>
+      </div>
+  </section>
+</div>
+</div>
+</div>
+</section>
       <!-- testimonial -->
 <section class="testimonials-section">
     <div class="container">

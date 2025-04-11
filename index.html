@@ -15,13 +15,13 @@
 
 </head>
 <body>
-
+    <div id="header"></div>
     <section class="hero">
-        <div id="header"></div>
+        
        
 
         <div class="container container d-flex justify-content-center align-items-center full-height hero-text ">
-            <div class="text-center mt-5 hero-title">
+            <div class="col-12 order-1 order-md-0 text-center  hero-title">
                 <div class="about-header">
                     <img src="images/icon1.png">
                      <span style="color:black" id="welcome">WELCOME TO</span>
@@ -42,38 +42,49 @@
             </div>
           </a>  
     </section>
-
     <div class="custom-partners-section">
-        <div id="customPartnersCarousel" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row d-flex">
-                        <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/zurich.png" alt="Zurich"></div></div>
-                        <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/qbe.png" alt="QBE"></div></div>
-                        <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/nti.png" alt="NTI"></div></div>
-                        <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/vero.png" alt="Vero"></div></div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row d-flex">
-                        <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/atc.png" alt="Partner 5"></div></div>
-                        <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/cgu.png" alt="Partner 6"></div></div>
-                        <div class="col-md-3"><div class="custom-partner-card"><img src="assets/images/uaa.png" alt="Partner 7"></div></div>
-                        <div class="col-md-3"><div class="custom-partner-card"><img src="/api/placeholder/200/80" alt="Partner 8"></div></div>
-                    </div>
-                </div>
-                <button class="custom-carousel-control-prev" type="button" data-bs-target="#customPartnersCarousel" data-bs-slide="prev">
-                    <span class="custom-carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span > <i class="fas fa-chevron-left"></i>  </span>
-                </button>
+        <div id="customPartnersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row d-flex">
+                <div class="col-6 col-md-3"><div class="custom-partner-card"><img src="assets/images/zurich.png" alt="Zurich"></div></div>
+                <div class="col-6 col-md-3"><div class="custom-partner-card"><img src="assets/images/qbe.png" alt="QBE"></div></div>
+                <div class="col-6 col-md-3"><div class="custom-partner-card"><img src="assets/images/nti.png" alt="NTI"></div></div>
+                <div class="col-6 col-md-3"><div class="custom-partner-card"><img src="assets/images/vero.png" alt="Vero"></div></div>
+              </div>
             </div>
-            
-            <button class="custom-carousel-control-next" type="button" data-bs-target="#customPartnersCarousel" data-bs-slide="next">
-                <span class="custom-carousel-control-next-icon" aria-hidden="true"></span>
-                <span ><i class="fas fa-chevron-right"></i> </span>
+            <div class="carousel-item">
+              <div class="row d-flex">
+                <div class="col-6 col-md-3"><div class="custom-partner-card"><img src="assets/images/atc.png" alt="Partner 5"></div></div>
+                <div class="col-6 col-md-3"><div class="custom-partner-card"><img src="assets/images/cgu.png" alt="Partner 6"></div></div>
+                <div class="col-6 col-md-3"><div class="custom-partner-card"><img src="assets/images/uaa.png" alt="Partner 7"></div></div>
+                <div class="col-6 col-md-3"><div class="custom-partner-card"><img src="/api/placeholder/200/80" alt="Partner 8"></div></div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Desktop arrows -->
+          <button class="custom-carousel-control-prev d-none d-md-flex" type="button" data-bs-target="#customPartnersCarousel" data-bs-slide="prev">
+            <span class="custom-carousel-control-prev-icon" aria-hidden="true"></span>
+            <span><i class="fas fa-chevron-left"></i></span>
+          </button>
+      
+          <button class="custom-carousel-control-next d-none d-md-flex" type="button" data-bs-target="#customPartnersCarousel" data-bs-slide="next">
+            <span class="custom-carousel-control-next-icon" aria-hidden="true"></span>
+            <span><i class="fas fa-chevron-right"></i></span>
+          </button>
+      
+          <!-- Mobile controls -->
+          <div class="custom-carousel-controls-mobile d-flex d-md-none justify-content-center mt-3">
+            <button class="custom-carousel-control-prev-mobile" type="button" data-bs-target="#customPartnersCarousel" data-bs-slide="prev">
+              <i class="fas fa-chevron-left"></i>
             </button>
+            <button class="custom-carousel-control-next-mobile" type="button" data-bs-target="#customPartnersCarousel" data-bs-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
-    </div>
+
   
     <section class="quote-section">
         <h2 class="quote-heading">Get a Free Truck Insurance Quote</h2>
@@ -476,10 +487,10 @@
       <section class="transport-operator py-6">
         <div class="container">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <img src="assets/images/transport-truck.png" alt="Transport Truck" class="img-fluid rounded">
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <h2 class="Transport fw-bold mb-3">Transport operator package</h2>
                     <p class="mb-4">We can offer combined transport operators insurance which can cover all of the above coverage under one policy.</p>
                     
@@ -564,7 +575,7 @@
                     <div class="carousel-item active">
                         <div class="row">
                             <div class="col-md-4">
-                                <div class="card">
+                                <div class="card placeholder-card">
                                     <div class="image-container">
                                         <img src="images/prime.png" alt="Prime Mover" class="img-fluid">
                                     </div>
@@ -576,7 +587,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 d-none d-md-block">
-                                <div class="card">
+                                <div class="card placeholder-card">
                                     <div class="image-container">
                                         <img src="images/cement.png" alt="Cement Mixer" class="img-fluid">
                                     </div>
@@ -588,7 +599,7 @@
                                 </div>
                             </div>
                             <div class="col-md-4 d-none d-md-block">
-                                <div class="card">
+                                <div class="card placeholder-card">
                                     <div class="image-container">
                                         <img src="images/Insurance.png" alt="Tow Truck" class="img-fluid">
                                     </div>
@@ -644,6 +655,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- Inside your carousel container, after the slides -->
+
     
                 <!-- Carousel Controls -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#insuranceCarousel" data-bs-slide="prev">
@@ -671,9 +684,13 @@
       <div class="step-connector"></div>
 
       <!-- Truck Animation -->
-      <div class="truck-container">
+      <div class="truck-container" >
+        <p id=""></p>
           <img src="images/truck-move.png" alt="Truck" class="truck-move">
       </div>
+      <div class="truck2-container">
+        <img src="images/truck-move.png" alt="Truck" class="truck-move">
+    </div>
 
       <!-- Steps -->
       <div class="row">
@@ -681,29 +698,29 @@
               <div class="step-circle">
                   <img src="images/truck5.png" alt="Icon">
               </div>
-              <h3>1. Planning</h3>
-              <p>Lorem ipsum is simply dummy text of the printing and typesetting industry</p>
+              <h3>1.Hassle-Free Process</h3>
+              <p>From getting a quote to filing claims, our seamless process ensures minimal effort on your part while maximizing benefits.            </p>
           </div>
           <div class="col-6 col-md-3 step">
               <div class="step-circle">
                   <img src="images/truck5.png" alt="Icon">
               </div>
-              <h3>2. Planning</h3>
-              <p>Lorem ipsum is simply dummy text of the printing and typesetting industry</p>
+              <h3>2.Australia-Wide Coverage            </h3>
+              <p>We partner with Australia’s leading insurance providers to deliver competitive premiums without compromising on coverage. </p>
           </div>
           <div class="col-6 col-md-3 step">
               <div class="step-circle">
                   <img src="images/truck5.png" alt="Icon">
               </div>
-              <h3>3. Planning</h3>
-              <p>Lorem ipsum is simply dummy text of the printing and typesetting industry</p>
+              <h3>3.Tailored Solutions</h3>
+              <p>Whether you’re an individual owner-driver or managing a fleet of trucks, our policies are customized to suit your business needs</p>
           </div>
           <div class="col-6 col-md-3 step">
               <div class="step-circle">
                   <img src="images/truck5.png" alt="Icon">
               </div>
-              <h3>4. Planning</h3>
-              <p>Lorem ipsum is simply dummy text of the printing and typesetting industry</p>
+              <h3>4.Flexible Payment Options</h3>
+              <p>Our monthly payment plans help you manage cash flow efficiently while ensuring your trucks remain protected.</p>
           </div>
       </div>
   </div>
@@ -731,12 +748,12 @@
                   <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                              Lorem ipsum is not simply random text?
+                            What types of truck insurance do you offer?
                           </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                           <div class="accordion-body">
-                              Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the...
+                            We provide comprehensive coverage for various truck types, including concrete trucks, fleet trucks, tippers, prime movers, and tow trucks. We also offer specialized coverage such as marine cargo insurance and public liability insurance.
                           </div>
                       </div>
                   </div>
@@ -744,12 +761,13 @@
                   <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
                           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                              Lorem ipsum is not simply random text?
+                            How can I save on my truck insurance premium? 
                           </button>
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                           <div class="accordion-body">
-                              Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the...
+                            You can save by bundling multiple policies under one package, selecting the right radius of operation, and opting for monthly payment plans to manage cash flow effectively.
+
                           </div>
                       </div>
                   </div>
@@ -757,12 +775,12 @@
                   <div class="accordion-item">
                       <h2 class="accordion-header" id="headingThree">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Lorem ipsum is not simply random text?
+                            What areas do you service?
                           </button>
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                           <div class="accordion-body">
-                              Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the...
+                            BestTruck operates nationwide, with a strong presence in [specific regions]. We also offer cross-border services to Canada and Mexico
                           </div>
                       </div>
                   </div>
@@ -770,12 +788,12 @@
                   <div class="accordion-item">
                       <h2 class="accordion-header" id="headingFour">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                              Lorem ipsum is not simply random text?
+                            How can I get a quote for your services?
                           </button>
                       </h2>
                       <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
                           <div class="accordion-body">
-                              Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the...
+                            You can easily request a quote through our website or by contacting our customer service team directly. We strive to provide competitive and transparent pricing.
                           </div>
                       </div>
                   </div>
@@ -852,6 +870,7 @@
       </div>
   </div>
 </section>
+
   
 
 
@@ -863,6 +882,8 @@
     
 <!-- Footer Placeholder -->
 <div id="footer"></div>
+<div id="customPartnersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
 
 <!-- Bootstrap JS -->
 
@@ -938,6 +959,7 @@ function highlightActiveLink() {
 
 
 });
+
 document.addEventListener('DOMContentLoaded', function() {
             // Get tab buttons and forms
             const tabBtns = document.querySelectorAll('.tab-btn');
@@ -957,6 +979,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         });
+var carouselElement = document.querySelector('#customPartnersCarousel');
+  var carousel = new bootstrap.Carousel(carouselElement, {
+    interval: 3000,
+    ride: 'carousel',
+    pause: false, // optional: disables pause on hover
+    wrap: true     // ensures the carousel loops
+  });
+  
 
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

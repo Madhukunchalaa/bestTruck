@@ -1,327 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Best Truck Insurance - Home</title>
-  
-    <style>
-        /* Common styles for all pages */
-        /* Logo styles */
-        .logoo-container {
-            background-color: white;
-            border: 1px solid #F37220;
-            height: 119px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-        }
-        
-        .logoo-container img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        /* Top nav styles */
-        .top-nav {
-            background-color: #003672;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 16px;
-        }
-        
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            margin-right: 20px;
-        }
-        
-        .social-icons a {
-            color: white;
-        }
-        
-        .social-icons{
-            margin-left: auto !important;
-            padding: 4px;
-        }
-        
-        .social-icons i{
-            width: 17px;
-        }
-        
-        /* Main navigation */
-        .main-nav {
-            background-color: #FF7200;
-            padding: 0 15px;
-        }
-        
-        .nav-link {
-            position: relative;
-            color: white !important;
-            font-weight: 500;
-            padding: 15px !important;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: #003672 !important;
-        }
-        
-        /* Styling for active link - current page */
-        .nav-link.active {
-            color: white !important;
-            font-weight: 600;
-        }
-        
-        /* Underline for active link */
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 8px;
-            left: 15px;
-            right: 15px;
-            height: 2px;
-            background-color: white;
-        }
-        
-        /* Active dropdown item styling */
-        .dropdown-item.active {
-            background-color: #FF7200;
-            color: white;
-            font-weight: 600;
-            position: relative;
-        }
-        
-        .dropdown-item.active::after {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 10px;
-            right: 10px;
-            height: 2px;
-            background-color: white;
-        }
-        
-        .get-quote-btn {
-            background-color: white;
-            color: #003672;
-            border-radius: 25px;
-            padding: 8px 25px;
-            font-weight: bold;
-            border: none;
-            transition: all 0.3s ease;
-        }
-        
-        .get-quote-btn:hover {
-            background-color: #003672;
-            color: white;
-        }
-        
-        /* Content area */
-        .content-area {
-            padding: 50px 20px;
-            min-height: 500px;
-        }
-        
-        /* Mobile logo in navigation */
-        .mobile-logo {
-            display: none;
-            max-height: 40px;
-        }
-        
-        .navbar-nav{
-            font-size: 19px !important;
-        }
-        
-        /* Mobile styles */
-        @media (max-width: 991.98px) {
-            .logoo-container {
-                display: none; /* Hide the desktop logo container on mobile */
-            }
-            
-            .mobile-logo {
-                display: block; /* Show mobile logo */
-            }
-            
-            .main-nav {
-                background-color: transparent !important; /* Remove background for mobile nav */
-                padding: 10px;
-            }
-            
-            .navbar-collapse {
-                background-color: #FF7200; /* Keep the dropdown background orange */
-                padding: 10px;
-                border-radius: 0 0 5px 5px;
-                margin-top: 10px;
-            }
-            
-            .top-nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .social-icons {
-                margin-top: 10px;
-            }
-            
-            .navbar-toggler {
-                border: none;
-                color: #FF7200; /* Orange color for the hamburger */
-                background-color: white;
-                border-radius: 4px;
-            }
-            
-            .social-icons{
-                display: none;
-            }
-            
-            .navbar-toggler:focus {
-                box-shadow: none;
-            }
-            
-            .navbar-brand {
-                margin-right: auto; /* Push the logo to the left */
-            }
-            
-            /* Mobile active link styles */
-            .nav-link.active::after {
-                bottom: 5px;
-                left: 10px;
-                right: 10px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Sticky Right Cards</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+    }
+
+    /* Banner at the top */
+    .banner {
+      height: 300px;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    /* Two-column layout */
+    .content-section {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .left-content {
+      flex: 2;
+      background: #fff;
+      padding: 20px;
+      height: 2000px; /* Just to make scroll effect visible */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .right-sidebar {
+      flex: 1;
+    }
+
+    .card-container {
+      position: sticky;
+      top: 100px;
+      
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Logo Container - Left Column -->
-    <div class="container-fluid p-0">
-        <div class="row g-0">
-            <div class="col-lg-2 logoo-container">
-                <img src="https://via.placeholder.com/200x80?text=Logo" alt="Best Truck Insurance">
-            </div>
-            
-            <div class="col-lg-10 p-0">
-                <!-- Top Navigation Bar -->
-                <div class="top-nav p-0">
-                <div class="container d-flex align-items-center justify-content-space-between">
-                    <div class="contact-info d-flex align-items-center">
-                        <a href="tel:1300170328" class="me-3">
-                          <i class="fas fa-phone-alt me-2"></i>1300 170 328
-                        </a>
-                      
-                        <!-- Vertical line -->
-                        <div class="vr mx-4"></div>
-                      
-                        <a href="mailto:info@besttruckinsurance.com">
-                          <i class="fas fa-envelope me-2"></i>info@besttruckinsurance.com
-                        </a>
-                      </div>
-                      
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Main Navigation -->
-                <nav class="navbar navbar-expand-lg main-nav p-0">
-                    <div class="container-fluid">
-                        <!-- Mobile Logo - Only visible on mobile -->
-                        <a class="navbar-brand" href="#">
-                            <img src="https://via.placeholder.com/200x80?text=Logo" alt="Best Truck Insurance" class="mobile-logo">
-                        </a>
-                        
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        
-                        <div class="collapse navbar-collapse" id="mainNavbar">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">About Us</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
-                                        Services
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                        <li><a class="dropdown-item" href="service1.html">Concrete Truck Insurance</a></li>
-                                        <li><a class="dropdown-item" href="service2.html">Fleet Truck Insurance</a></li>
-                                        <li><a class="dropdown-item" href="service3.html">Tipper Truck Insurance</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact Us</a>
-                                </li>
-                            </ul>
-                            <button class="get-quote-btn">Get A Quote</button>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
 
-        <!-- Page Content -->
-        <div class="container content-area">
-            <h1>Welcome to Best Truck Insurance</h1>
-            <p>This is the home page content. The "Home" link in the navigation menu should be underlined since we are currently on this page.</p>
-        </div>
+  <!-- Banner -->
+  <section class="banner">
+    Welcome to My Website
+  </section>
+
+  <!-- Content Section -->
+  <section class="content-section">
+    <!-- Left Main Content -->
+    <div class="left-content">
+      <h2>Main Content</h2>
+      <p>Scroll down to see sticky effect on the right side.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at odio nec sem tempor consectetur. Sed vitae mauris ut eros gravida ullamcorper. Mauris at pharetra orci.</p>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // This function runs when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get current page filename from URL
-            let currentPage = window.location.pathname.split("/").pop();
-            
-            // If no filename is found (like at domain root), default to index.html
-            if (!currentPage) {
-                currentPage = "test.html";
-            }
-            
-            console.log("Current page detected:", currentPage);
-            
-            // Get all navigation links
-            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
-            
-            // Loop through all nav links to find the one matching current page
-            navLinks.forEach(link => {
-                const linkHref = link.getAttribute('href');
-                
-                console.log("Checking link:", linkHref);
-                
-                // Check if this link matches the current page
-                if (linkHref === currentPage) {
-                    console.log("Match found! Adding active class to:", linkHref);
-                    
-                    // Add active class to current page link
-                    link.classList.add('active');
-                    
-                    // If it's a dropdown item, also highlight the parent dropdown
-                    const parentDropdown = link.closest('.dropdown');
-                    if (parentDropdown) {
-                        const dropdownToggle = parentDropdown.querySelector('.nav-link.dropdown-toggle');
-                        if (dropdownToggle) {
-                            dropdownToggle.classList.add('active');
-                        }
-                    }
-                }
-            });
-        });
-    </script>
+    <!-- Right Sidebar Sticky Cards -->
+    <div class="right-sidebar">
+      <div class="card-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
