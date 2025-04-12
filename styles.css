@@ -1166,13 +1166,7 @@ padding: 10px !important;
     position: relative;
     padding-left: 30px;
 }
-.best-section ul li::before {
-    content: "✔";
-    color: #f5a623;
-    position: absolute;
-    left: 0;
-    font-size: 18px;
-}
+
 .carousel-item {
     padding: 20px;
 }
