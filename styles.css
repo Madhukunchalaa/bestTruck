@@ -1088,10 +1088,10 @@ padding: 10px !important;
 }
 
 .truck-img {
-    width: 480px;
+    
     height: 576px;
     border-radius: 30px;
-    margin-left: -40px;
+    margin-left: -78px;
 }
 
 .box{
@@ -1111,7 +1111,7 @@ padding: 10px !important;
 }
 
 .transport-operator {
-    width:1406px ;
+    
     height:650px ;
     margin-bottom: 40px;
 }
