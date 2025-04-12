@@ -984,8 +984,6 @@ padding: 10px !important;
 
 .about-description{
     /* font-family: "Poppins"; */
-    width: 785px;
-    height: 112px;
     border-left: 5px solid #FF7200;
     padding-left: 10px;
     margin-top:30px;
@@ -1099,7 +1097,6 @@ padding: 10px !important;
 }
 
 .box{
-    width:165% !important;
     height: auto !important;
     border: 3px solid #ff6b00;
     background-color: #E1EEFB;
